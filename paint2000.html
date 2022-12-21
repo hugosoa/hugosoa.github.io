@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint 2000</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logo.png">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    
+</head>
+<body data-barba="wrapper">
+    <div id="loaders" class="loader-container">
+        <div class="loader"></div> 
+      </div>
+    <div class="logo">
+        <a href="index.html"><img src="img/logo.png"></a>
+    </div>
+    <div> 
+        <a class="popup prevent" href="about.html">À Propos</a>
+    </div>
+    <h1 class="title">
+    <div class="span-container s1">
+        <span>hugo&#160soares</span>
+    </div>
+    <div class="span-container s2">
+        <span>hugo&#160soares</span>
+    </div>
+    </h1>
+    <div class="container-paint" data-barba="container" data-barbar-namespace="home">
+        <section class="tools-board">
+            <div class="row">
+                <label class="titles">Formes</label>
+                <ul class="options">
+                    <li class="option tool" id="rectangle"><i class="las la-vector-square"></i>
+                        <span>Rectangle</span>
+                    </li>
+                    <li class="option tool" id="triangle"><i class="las la-exclamation-triangle"></i>
+                        <span>Triangle</span>
+                    </li>
+                    <li class="option tool" id="circle"><i class="las la-circle-notch"></i>
+                        <span>Rond</span>
+                    </li>
+                    <li class="option">
+                        <input type="checkbox" name="fill-color" id="fill-color">
+                        <label for="fill-color">Remplir</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <label class="titles">Outils</label>
+                <ul class="options">
+                    <li class="option active tool" id="brush"><i class="las la-paint-brush"></i>
+                        <span>Pinceau</span>
+                    </li>
+                    <li class="option tool" id="eraser"><i class="las la-eraser"></i>
+                        <span>Gomme</span>
+                    </li>
+                    <li class="option">
+                        <input type="range" name="size-slider" id="size-slider" min="1" max="30" value="5">
+                    </li>
+                </ul>
+            </div>
+            <div class="row colors">
+                <label class="titles">Couleurs</label>
+                <ul class="options colors">
+                    <li class="option selected"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                </ul>
+                <div class="palette option">
+                    <input type="color" id="color-picker" value="#058F91">
+                </div>
+            </div>
+            <div class="row buttons">
+                <button id="clear-canvas"><i class="las la-cut"></i></button>
+                <button id="save-img"><i class="las la-save"></i></button>
+            </div>
+        </section>
+        <section class="drawing-board">
+            <canvas></canvas>
+        </section>
+        <div class="undo-paint">
+            <a href="index.html" style="color: #fff";>&#x21A9</a>
+          </div>
+    </div>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="script/title.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.1/gsap.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="script/app.js"></script>
+    <script src="script/paint.js"></script>
+</body>
+</html>

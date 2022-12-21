@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Source+Sans+Pro:wght@300;400&display=swap');
+
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #eff1e6;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    user-select: none;
+}
+
+.logo{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+.logo img{
+    width: 20px;
+    position: absolute;
+}
+.title{
+    transform: translate(-50%, -50%);
+    position: relative;
+    top: 45px;
+    left: 150px;
+}
+.title span{
+    color: #131313;
+    font-size: 26px;
+    transition: 0.2s;
+    font-weight: 400;
+    will-change: transform;
+    display: inline-block;
+}
+.s1 span{
+    transform-origin: bottom;
+}
+.s2 span{
+    transform-origin: top;
+    transform: translateY(100%) rotateX(-90deg)
+}
+.s2{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.title:hover .s1 span{
+    transform: translateY(-100%) rotateX(-90deg);
+}
+.title:hover .s2 span{
+    transform: translateY(0%) rotateX(0deg);
+}
+.popup-active {
+    position: absolute;
+    top: 100px;
+    left: 60px;
+}
+.popup-active {
+    text-decoration: none;
+    color: #058F91;
+    font-size: 20px;
+    cursor: pointer;
+}
+.popup-active::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 27px;
+    width: 100%;
+    height: 2px;
+    background-color: #058F91;
+    transition: width 0.2s ease;
+}
+.bjr{
+    position: absolute;
+    top: 27%;
+    left: 5%;
+    font-size: 30px;
+    color: #131313;
+    font-family: Oswald ;
+}
+.presentation{
+    position: absolute;
+    max-width: 640px;
+    top: 35%;
+    left: 7%;
+    font-size: 30px;
+    color: #131313;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 37px;
+    word-spacing: 2px;
+}
+#contact{
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    font-family: oswald;
+    font-weight: 300;
+    font-size: 30px;
+}
+#contact::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    height: 2px;
+    background-color: #058F91;
+    transition: width 0.2s ease;
+}
+#cv{
+    position: absolute;
+    top: 30%;
+    left: 62%;
+    font-family: oswald;
+    font-weight: 300;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #058F91;
+    box-shadow: 2px 2px 2px 2px #000;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+#imgcv img{
+
+    visibility: hidden;
+    transform: translate(-50%, -50%);
+    position:fixed;
+    width: 32vw;
+    max-height: auto;
+    top: 50%;
+    left: 50%;
+}
+
+#imgcv.active img{
+    visibility: visible;
+
+    top: 50%;
+    left: 50%;
+}
+#close{
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    font-size: 50px;
+    cursor: pointer;
+    color: #058F91;
+}
+
+#imgcv.active a{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.9s;
+}
+
+.undo{
+    position: absolute;
+    top: 51%;
+    left: 2%;
+    font-size: 30px;
+}
