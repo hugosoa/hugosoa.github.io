@@ -26,9 +26,6 @@ new Typewriter(txtAnim, {
 .typeString('<span style="color: #eff1e6">About</span>')
 .pauseFor(2500)
 .deleteChars(5)
-.typeString('<span style="color: #eff1e6">について</span>')
-.pauseFor(2500)
-.deleteChars(5)
 .start();
 
 new Typewriter(cvAnim, {

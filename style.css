@@ -86,22 +86,30 @@ input{
     position: absolute;
     bottom: 50px;
     left: 80px;
-    font-size: 21px;
+    font-size: 18px;
     font-weight: 400;
     display: inline-block;
+    line-height: 25px;
 }
-.signature::after{
+#mailme::after{
     content: "";
     display: block;
     position: absolute;
-    top: 27px;
     width: 20px;
     height: 2px;
     background-color: #058F91;
-    transition: 0.2s;
+    transition: 0.2s; 
 }
-.signature:hover::after{
-    width: 100%;
+#mailme span{
+    opacity: 0;
+    transition: .4s;
+}
+#mailme:hover::after{
+    width: 80%;
+    opacity: 1;
+}
+#mailme:hover span{
+    opacity: 1;
 }
 .popup {
     position: absolute;
@@ -233,7 +241,6 @@ a{
     top: 90%;
     left: 50%;
     font-size: 90px;
-    letter-spacing: 1px;
     text-align: center;
     width: 80%;
     cursor: pointer;
@@ -443,4 +450,158 @@ section{
 .fondu-out{
     opacity: 0;
     transition: opacity 0.4s;
+}
+
+@media screen and (max-width:1000px){
+    
+    body{
+        background: #131313;
+    }
+
+    .title{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    }
+    .popup {
+        position: absolute;
+        top: 80px;
+        left: 40px;
+        text-decoration: none;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .popup::after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 27px;
+        width: 20px;
+        height: 2px;
+        background-color: #058F91;
+        transition: width 0.2s ease;
+    }
+    .popup:hover::after{
+        width: 100%;
+    }
+    .logo{
+        position: fixed;
+        top: 2%;
+        left: 5%;
+        transform:translate(-50%, -50%);
+    }
+    .logo img{
+        position: fixed;
+        top: 15px;
+        left: 50%;
+        transform:translate(-50%, -50%);
+    }
+    .container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        max-height: 2000px;
+        transform: translate(-50%, 0);
+        left: 50%;
+        margin-top: 150px;
+        width: 80%;
+    }
+    .box {
+        position: relative;
+        flex: 1; 
+        max-width: 100%;
+        margin: 20px 0px 20px 0px
+    }
+    .box img:not(.deux img) {
+        width: 100%;
+        height: 400px;
+        object-fit: cover; 
+        transition: .8s;
+        box-shadow: none;
+    }
+    .box figcaption{
+        writing-mode: tb-rl;
+        position: absolute;
+        font-weight: bold;
+        font-size: 20px;
+        top: 0px;
+        margin-top: 5px;
+        opacity: 1;
+        font-family: source sans pro;
+        user-select: none;
+    }
+    .box:hover figcaption{
+        opacity: 1;
+        transition: .9s;
+        cursor: pointer;
+    }
+    .signature {
+        display: none;
+    }
+    .resize{
+        position: absolute;
+        height: 50%;
+        width: 80%;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+    }
+    .resize:not(.deux){
+        box-shadow: 100px 100px 20px rgba(0, 0, 0, 0.3);
+    }
+    .resize img{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+    .caption{
+        transform: translate(-50%, -50%);
+        position: relative;
+        bottom: 20%;
+        left: 50%;
+        font-size: 20px;
+        letter-spacing: 1px;
+        text-align: center;
+        min-width: auto;
+        margin-bottom: 10px;
+        font-size: 15px;
+    
+    }
+    .caption i{
+        font-family: 'Courier New', Courier, monospace;
+        line-height: 0%;
+    }
+    .titre{
+        display: flex;
+        font-size: 7vw;
+        transform: translate(-50%, -50%);
+        font-family: Oswald;
+        position: inherit;
+        top: 0%;
+        left: 50%;
+        font-weight: 100;
+        z-index: 10;
+        letter-spacing: 15px;
+        margin: auto;
+        text-align: center;
+    }
+    .undo{
+        position: absolute;
+        top: 2%;
+        left: 12%;
+        font-size: 30px;
+    }
+    .plus{
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        font-size: 60px;
+        text-align: center;
+        width: 50%;
+    }
+
 }
