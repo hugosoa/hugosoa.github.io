@@ -461,7 +461,7 @@ section{
     .title{
     position: absolute;
     top: 20px;
-    left: 50%;
+    left: 28%;
     transform:translate(-50%, -50%);
     }
     .popup {
@@ -487,7 +487,7 @@ section{
     }
     .logo{
         position: fixed;
-        top: 2%;
+        top: 25px;
         left: 5%;
         transform:translate(-50%, -50%);
     }
@@ -590,7 +590,7 @@ section{
     }
     .undo{
         position: absolute;
-        top: 2%;
+        top: 80%;
         left: 12%;
         font-size: 30px;
     }
